@@ -109,7 +109,7 @@ PG_DATABASE=db_prueba_tecnica
 
 1. Proveedores cercanos: `GET /api/v1/providers/nearby`
 
-- Espera un encabezado de autorización con un token válido y parámetros de consulta con la latitud y longitud del usuario.
+- Espera un encabezado de autorización con un token válido y parámetros de consulta con la `latitud` y `longitud` del usuario.
 
 - Ejemplo de parámetros de consulta:
 
