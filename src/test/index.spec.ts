@@ -53,11 +53,21 @@ describe('SignIn', () => {
   })
 
   test('should return 200 and a token when provided valid credentials', async () => {
+    const randomUser = `${makeRandomString(5)}@gmail.com`
+
+    await request(app)
+      .post('/api/v1/auth/sign-up')
+      .send({
+        email: randomUser,
+        password: '123',
+        username: `${makeRandomString(5)}`,
+      })
+
     const login = await request(app)
       .post('/api/v1/auth/sign-in')
       .send({
-        email: 'fer@gmail.com',
-        password: '123'
+        email: randomUser,
+        password: '123',
       })
 
     expect(login.statusCode).toEqual(200)
@@ -124,11 +134,21 @@ describe('ProvidersController', () => {
   })
 
   test('should return nearby providers', async () => {
+    const randomUser = `${makeRandomString(5)}@gmail.com`
+
+    await request(app)
+      .post('/api/v1/auth/sign-up')
+      .send({
+        email: randomUser,
+        password: '123',
+        username: `${makeRandomString(5)}`,
+      })
+
     const login = await request(app)
       .post('/api/v1/auth/sign-in')
       .send({
-        email: 'fer@gmail.com',
-        password: '123'
+        email: randomUser,
+        password: '123',
       })
 
     const providers = await request(app)
