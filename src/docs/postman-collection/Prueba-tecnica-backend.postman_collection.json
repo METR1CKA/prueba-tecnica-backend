@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "3472216a-a317-4ce1-bcad-287d19df8dc3",
+		"name": "Prueba-tecnica-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17455152"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/sign-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"123\",\n    \"username\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImZlckBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCR0NDBXd1gwMDRFUVN6SnIzb2Y0SjIuY3IwdGZ2ZldsQVZjdXZpRU9OUTZkdDczSGlYRS9VMiIsInVzZXJuYW1lIjoibWV0cmlja2EifSwiaWF0IjoxNjk4NjE2NTYwLCJleHAiOjE2OTg2MjAxNjB9.TVD6CwL2lb1F4aEXheHDkEisyO8MzO3D0GVv_zlkuDk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTg2MjE2MDQsImV4cCI6MTY5ODYyNTIwNH0.VnO2GYUPNDWwptBAgQtMckaPlgEfOquCc6Jp-56P3Ms",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/verify-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Providers",
+			"item": [
+				{
+					"name": "NearbyProviders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDRHRWNWaWtpS2F5LmtKUXQ3UmtBb3VYS3JGdmUvN1RBMmhwUjBMNU9ic1NvV0dMUTd4eHY2IiwidXNlcm5hbWUiOiJhZG1pbiJ9LCJpYXQiOjE2OTg2MzM0MzEsImV4cCI6MTY5ODYzNzAzMX0.nNTC9pc9guOqj-GHSX8Hg_99rlLuA46Cc9tR7S3LkOE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/providers/nearby?latitude=19.432683&longitude=-99.133205",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"providers",
+								"nearby"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "19.432683"
+								},
+								{
+									"key": "longitude",
+									"value": "-99.133205"
+								},
+								{
+									"key": "latitude",
+									"value": "-19.432683",
+									"disabled": true
+								},
+								{
+									"key": "longitude",
+									"value": "99.133205",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INICIO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
