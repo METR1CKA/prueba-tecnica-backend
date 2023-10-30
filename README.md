@@ -72,9 +72,9 @@ PG_DATABASE=db_prueba_tecnica
 
 1. Inicio de sesión: `POST /api/v1/auth/sign-in`
 
-Espera un cuerpo de solicitud con el correo electrónico y la contraseña del usuario.
+- Espera un cuerpo de solicitud con el correo electrónico y la contraseña del usuario.
 
-Ejemplo de cuerpo de solicitud:
+- Ejemplo de cuerpo de solicitud:
 
 ```json
 {
@@ -85,9 +85,9 @@ Ejemplo de cuerpo de solicitud:
 
 2. Registro: `POST /api/v1/auth/sign-up`
 
-Espera un cuerpo de solicitud con el correo electrónico, la contraseña y el nombre de usuario del nuevo usuario.
+- Espera un cuerpo de solicitud con el correo electrónico, la contraseña y el nombre de usuario del nuevo usuario.
 
-Ejemplo de cuerpo de solicitud:
+- Ejemplo de cuerpo de solicitud:
 
 ```json
 {
@@ -99,19 +99,19 @@ Ejemplo de cuerpo de solicitud:
 
 3. Refrescar token: `POST /api/v1/auth/refresh-token`
 
-Espera un encabezado de autorización con un token invalido. Devolviendo un token nuevo
+- Espera un encabezado de autorización con un token invalido. Devolviendo un token nuevo
 
 4. Verificar token: `GET /api/v1/auth/verify-token`
 
-Espera un encabezado de autorización con un token válido.
+- Espera un encabezado de autorización con un token válido.
 
 ### Rutas de Proveedores
 
 1. Proveedores cercanos: `GET /api/v1/providers/nearby`
 
-Espera un encabezado de autorización con un token válido y parámetros de consulta con la latitud y longitud del usuario.
+- Espera un encabezado de autorización con un token válido y parámetros de consulta con la latitud y longitud del usuario.
 
-Ejemplo de parámetros de consulta:
+- Ejemplo de parámetros de consulta:
 
 ```
 /api/v1/providers/nearby?latitude=19.432683&longitude=-99.133205
