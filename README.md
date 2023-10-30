@@ -52,6 +52,8 @@ PG_DATABASE=db_prueba_tecnica
 
 `npm run db:rollback`
 
+> En este comando, typeorm no revierte todas las migraciones, solamente revierte la ultima migracion creada
+
 ## Ejecución
 
 1. Correr el comando para modo desarrollo:
