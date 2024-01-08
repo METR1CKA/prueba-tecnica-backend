@@ -37,7 +37,7 @@ export const signin = async (req: Request, res: Response) => {
   if (!user) {
     return res.status(400).json({
       status: 'Error',
-      message: 'Credenciales incorrectas',
+      message: 'Usuario no encontrado',
       data: null
     })
   }
