@@ -3,7 +3,7 @@ import { Provider } from '../../models/Provider'
 import { AppDataSource } from '../../../config/database'
 
 export const nearbyProviders = async (req: Request, res: Response) => {
-  const { latitude, longitude } = req.query
+  const { latitude, longitude } = req.body
 
   if (!latitude || !longitude) {
     return res.status(400).json({
